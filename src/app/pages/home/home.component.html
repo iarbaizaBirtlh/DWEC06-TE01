@@ -1,0 +1,10 @@
+<h2>🎮 Juegos de moda</h2>
+
+<div class="loading-container" *ngIf="loading">Cargando juegos...</div>
+
+<div class="games-container" *ngIf="!loading">
+  <app-game-card 
+    *ngFor="let game of games" 
+    [game]="game">
+  </app-game-card>
+</div>

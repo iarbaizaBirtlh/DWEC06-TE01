@@ -1,0 +1,13 @@
+<div class="profile-container">
+    <div class="profile-card">
+        <h1>Perfil de {{ username }}</h1>
+        <div class="profile-details">
+            <p><strong>Email:</strong> {{ email }}</p>
+            <div class="stats-grid">
+                <div class="stat-item"><span>Pendientes:</span> <strong>{{ stats.wishlist }}</strong></div>
+                <div class="stat-item"><span>Jugando:</span> <strong>{{ stats.playing }}</strong></div>
+                <div class="stat-item"><span>Completados:</span> <strong>{{ stats.completed }}</strong></div>
+            </div>
+        </div>
+    </div>
+</div>

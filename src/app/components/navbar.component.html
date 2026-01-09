@@ -1,0 +1,12 @@
+<nav class="navbar">
+    <h1 class="logo">🎮 GameHub</h1>
+
+    <ul class="links">
+        <li><a routerLink="/">Inicio</a></li>
+        <li><a routerLink="/games">Catálogo</a></li>
+        <li><a routerLink="/library">Mi biblioteca</a></li>
+        <li *ngIf="!isLoggedIn"><a routerLink="/login">Login</a></li>
+        <li *ngIf="isLoggedIn"><a routerLink="/profile">Perfil</a></li>
+        <li *ngIf="isLoggedIn"><a (click)="logout()">Logout</a></li>
+    </ul>
+</nav>

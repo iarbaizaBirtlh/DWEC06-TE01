@@ -1,0 +1,31 @@
+.profile-container {
+    padding: 40px 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-card {
+    background: #1b2838;
+    padding: 30px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 600px;
+    border: 1px solid rgba(102, 192, 244, 0.2);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.stat-item {
+    background: #2a475e;
+    padding: 15px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.stat-item span { display: block; font-size: 0.8rem; color: #66c0f4; }
+.stat-item strong { font-size: 1.5rem; color: white; }

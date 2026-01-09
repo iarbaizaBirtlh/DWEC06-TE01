@@ -1,0 +1,10 @@
+<div class="game-card" *ngIf="game">
+    <img *ngIf="game.background_image" [src]="game.background_image" alt="{{ game.name }}"/>
+
+    <div class="info">
+        <h3>{{ game.name }}</h3>
+        <p *ngIf="game.released">Released: {{ game.released }}</p>
+        <p *ngIf="game.rating">Rating: {{ game.rating }} ⭐ </p>
+        <a [routerLink]="['/games', gameId]">Ver detalles</a>
+    </div>
+</div>

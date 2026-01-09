@@ -1,0 +1,24 @@
+<h2>My Biblioteca</h2>
+
+<div class="loading-container" *ngIf="loading">Cargando biblioteca...</div>
+
+<div class="loading-container" *ngIf="!loading && library.length === 0">
+    No tienes juegos en tu biblioteca.
+</div>
+
+<div class="library-grid">
+    <div class="library-card" *ngFor="let item of library">
+        <img [src]="item.game.background_image"/>
+        <h3>{{ item.game.name }}</h3>
+
+        <select [(ngModel)]="item.status" (change)="updateStatus(item)">
+            <option value="wishlist">Pendiente</option>
+            <option value="playing">Jugando</option>
+            <option value="completed">Completado</option>
+        </select>
+
+        <button class="delete" (click)="deleteGame(item.id)">
+            ❌ Quitar
+        </button>
+    </div>
+</div>

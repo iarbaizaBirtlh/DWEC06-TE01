@@ -1,0 +1,17 @@
+<h2>Catálogo de Juegos</h2>
+
+<div class="filters">
+    <input type="text" [(ngModel)]="searchText" placeholder="Buscar juego..."/>
+    <select [(ngModel)]="selectedGenre">
+        <option value="">Todos los géneros</option>
+        <option *ngFor="let g of genres" [value]="g.slug">{{ g.name }}</option>
+    </select>
+    <button (click)="onSearch()">Buscar</button>
+</div>
+
+<div class="games-grid">
+    <app-game-card 
+        *ngFor="let game of games" 
+        [game]="game">
+    </app-game-card>
+</div>

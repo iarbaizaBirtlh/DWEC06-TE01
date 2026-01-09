@@ -1,0 +1,47 @@
+<div class="detail-container" *ngIf="game">
+    <div class="hero-header">
+        <img [src]="game.background_image" class="hero-img">
+        <div class="hero-gradient"></div>
+        <div class="hero-content">
+            <h1>{{ game.name }}</h1>
+            <span class="rating-badge">⭐ {{ game.rating }}</span>
+        </div>
+    </div>
+
+    <div class="detail-content">
+        <section class="info">
+            <p><strong>Año: </strong>{{ game.released }}</p>
+            <p><strong>Género: </strong>
+                <span *ngFor="let g of game.genres; let last = last">
+                    {{ g.name }}{{ !last ? ' | ' : '' }}
+                </span>
+            </p>
+            <p><strong>Plataformas: </strong>
+                <span *ngFor="let p of game.platforms; let last = last">
+                    {{ p.platform.name }}{{ !last ? ' | ' : '' }}
+                </span>
+            </p>
+            <div class="description-body" [innerHTML]="game.description"></div>
+            <button class="steam-btn-green" (click)="addToLibrary()">➕ Añadir a mi biblioteca</button>
+        </section>
+
+        <section class="screenshots">
+            <h3>Screenshots</h3>
+            <div class="carousel">
+                <img *ngFor="let s of screenshots" [src]="s.image">
+            </div>
+        </section>
+
+        <section class="comments">
+            <h3>Comentarios</h3>
+            <div class="comment-list">
+                <div *ngFor="let c of comments" class="comment-item">
+                    <div class="comment-user">{{ c.author }}</div>
+                    <div class="comment-text">{{ c.text }}</div>
+                </div>
+            </div>
+            <textarea [(ngModel)]="newComment" placeholder="Escribe un comentario..."></textarea>
+            <button class="steam-btn-blue" (click)="addComment()">Enviar</button>
+        </section>
+    </div>
+</div>

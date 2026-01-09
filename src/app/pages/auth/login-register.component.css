@@ -1,0 +1,36 @@
+form {
+  max-width: 400px;
+  margin: 50px auto;
+  background: #1b2838;
+  padding: 40px;
+  border-radius: 4px;
+  box-shadow: 0 15px 25px rgba(0,0,0,0.6);
+}
+
+form div {
+  margin-bottom: 20px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--steam-blue);
+  font-size: 0.9rem;
+}
+
+form input {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+form button {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.profile-info {
+  max-width: 600px;
+  margin: 40px auto;
+  background: #1b2838;
+  padding: 30px;
+}
